@@ -88,12 +88,21 @@ PROJECTS.update({
         summary="Word-trail booth game with themed worlds, built on the FG Booth Control platform."),
 })
 
+PROJECTS.update({
+    "Open_Season": dict(cat="multi", company="", year="", kicker="Battle Royale  ·  Multiplayer",
+        summary="Battle-royale shooter: character select, drop-plane skydive onto an island, third-person firefights and melee to the last player standing."),
+    "Shooting_Game_POC": dict(cat="games", company="", year="",
+        summary="Third-person shooter prototype: retake a fort from rebel forces with cover-based aiming, weapon swaps and explosive set pieces."),
+    "Postal_Pete": dict(cat="games", company="", year="",
+        summary="Mobile arcade game: guide Pete through the streets to deliver every envelope, avoid dogs and upgrade gear in the shop."),
+})
+
 # Display order: newest and most polished first. Projects not listed go to the end.
 ORDER = ["Pixel_Game", "Perfect_Hit", "Flap_Word", "Aviation_Maintenance_Sim", "Target_Strike", "Prize_Drop", "Word_Trail", "Prize_Match", "Soccer_Splatter", "Paint_Splat",
          "Ice_Hockey", "Rollercoaster", "Cash_Cow", "Number_Rangers", "Jet_Engine_VR", "NIA_Human_Anatomy",
          "Vulcan_Tower_Defense", "Tartarus_VR", "Sinverse", "Vulcan_Runner", "AR_Car_Controller", "Server_Hardware_VR",
          "HP_Server_VR", "AirportVerse", "VR_Wellbeing", "CC_Bio", "Celebrity_Golf", "Chuck_The_Sallar", "Horror_Survivor",
-         "Stellar_Void", "AR_Furniture", "Poker"]
+         "Stellar_Void", "Open_Season", "Shooting_Game_POC", "Postal_Pete", "AR_Furniture", "Poker"]
 BIG = {"Pixel_Game", "Perfect_Hit", "Aviation_Maintenance_Sim", "Vulcan_Tower_Defense"}
 
 CATEGORIES = [("all", "All work"), ("xr", "XR & Simulation"), ("multi", "Multiplayer"), ("booth", "Booth & Events"), ("games", "Mobile & PC Games")]
@@ -141,7 +150,7 @@ def main():
                                 "-preset", "slow", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", web], check=True)
             full = {"type": "file", "src": f"assets/work/{slug}/full.mp4"}
         out.append({
-            "slug": slug, "title": s["title"], "kicker": " · ".join(p.strip() for p in s["kicker"].split("·")),
+            "slug": slug, "title": s["title"], "kicker": " · ".join(p.strip() for p in meta.get("kicker", s["kicker"]).split("·")),
             "cat": meta["cat"], "company": meta.get("company", ""), "year": meta.get("year", ""),
             "summary": meta["summary"], "features": [c["caption"] for c in s["clips"] if c.get("caption")],
             "vertical": vertical, "big": s["name"] in BIG, "featured": s["name"] in BIG, "link": meta.get("link"),

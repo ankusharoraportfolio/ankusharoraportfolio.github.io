@@ -768,6 +768,84 @@ window.PROJECTS = [
   }
  },
  {
+  "slug": "open_season",
+  "title": "Open Season",
+  "kicker": "Battle Royale · Multiplayer",
+  "cat": "multi",
+  "company": "",
+  "year": "",
+  "summary": "Battle-royale shooter: character select, drop-plane skydive onto an island, third-person firefights and melee to the last player standing.",
+  "features": [
+   "Six playable characters",
+   "Ride the drop plane over the island",
+   "Skydive into the temple village below",
+   "Third-person firefights in open fields",
+   "Melee and ranged combat with damage numbers"
+  ],
+  "vertical": false,
+  "big": false,
+  "featured": false,
+  "link": null,
+  "loop": "assets/work/open_season/loop.mp4",
+  "poster": "assets/work/open_season/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/open_season/full.mp4"
+  }
+ },
+ {
+  "slug": "shooting_game_poc",
+  "title": "Shooter Prototype",
+  "kicker": "Third-Person Shooter · Proof of Concept",
+  "cat": "games",
+  "company": "",
+  "year": "",
+  "summary": "Third-person shooter prototype: retake a fort from rebel forces with cover-based aiming, weapon swaps and explosive set pieces.",
+  "features": [
+   "Retake the fort from rebel forces",
+   "Over-the-shoulder aiming from cover",
+   "Swap between AK-47 and Mac-11 on the fly",
+   "Cross the river and storm the temple",
+   "Explosive barrels and damage numbers",
+   "Defeat every rebel to win the mission"
+  ],
+  "vertical": false,
+  "big": false,
+  "featured": false,
+  "link": null,
+  "loop": "assets/work/shooting_game_poc/loop.mp4",
+  "poster": "assets/work/shooting_game_poc/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/shooting_game_poc/full.mp4"
+  }
+ },
+ {
+  "slug": "postal_pete",
+  "title": "Postal Pete",
+  "kicker": "Mobile Arcade · iOS",
+  "cat": "games",
+  "company": "",
+  "year": "",
+  "summary": "Mobile arcade game: guide Pete through the streets to deliver every envelope, avoid dogs and upgrade gear in the shop.",
+  "features": [
+   "Tap to move and collect every envelope",
+   "Avoid the dogs roaming the streets",
+   "Shop for faster uniforms and dog gadgets",
+   "Back to the post office to clear the level"
+  ],
+  "vertical": false,
+  "big": false,
+  "featured": false,
+  "link": null,
+  "loop": "assets/work/postal_pete/loop.mp4",
+  "poster": "assets/work/postal_pete/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/postal_pete/full.mp4"
+  }
+ },
+ {
   "slug": "ar_furniture",
   "title": "AR Furniture",
   "kicker": "WebAR · 8th Wall",
