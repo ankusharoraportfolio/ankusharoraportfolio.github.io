@@ -171,7 +171,7 @@ def main():
     idx = os.path.join(SITE, "index.html")
     html = open(idx).read()
     v = str(int(time.time()))
-    html = re.sub(r'(href|src)="(styles\.css|app\.js|projects\.js)(\?v=\d+)?"', lambda m: f'{m.group(1)}="{m.group(2)}?v={v}"', html)
+    html = re.sub(r'(href|src)="(styles\.css|app\.js|projects\.js|bg\.js)(\?v=\d+)?"', lambda m: f'{m.group(1)}="{m.group(2)}?v={v}"', html)
     open(idx, "w").write(html)
     print(f"{len(out)} projects -> {SITE}")
 
