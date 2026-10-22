@@ -1,32 +1,5 @@
 window.PROJECTS = [
  {
-  "slug": "pixel_game",
-  "title": "Pixel Adventure",
-  "kicker": "Pixel-Art Arcade · Mobile · Unity",
-  "cat": "games",
-  "company": "",
-  "year": "",
-  "summary": "Handheld-style pixel-art arcade game with themed levels: snowboarding, underwater and an ice-cavern yeti finale.",
-  "features": [
-   "Snowboard down snowy slopes",
-   "Swim past jellyfish and narwhals",
-   "Speed boosts and coin trails",
-   "Power-ups in an icy cavern",
-   "Ice yeti finale, level complete",
-   "End-of-run results screen"
-  ],
-  "vertical": true,
-  "big": true,
-  "featured": true,
-  "link": null,
-  "loop": "assets/work/pixel_game/loop.mp4",
-  "poster": "assets/work/pixel_game/poster.jpg",
-  "full": {
-   "type": "file",
-   "src": "assets/work/pixel_game/full.mp4"
-  }
- },
- {
   "slug": "perfect_hit",
   "title": "Perfect Hit",
   "kicker": "Trade-Show Booth Game · Unity",
@@ -53,6 +26,33 @@ window.PROJECTS = [
   "full": {
    "type": "file",
    "src": "assets/work/perfect_hit/full.mp4"
+  }
+ },
+ {
+  "slug": "pixel_game",
+  "title": "Pixel Adventure",
+  "kicker": "Pixel-Art Arcade · Mobile · Unity",
+  "cat": "games",
+  "company": "",
+  "year": "",
+  "summary": "Handheld-style pixel-art arcade game with themed levels: snowboarding, underwater and an ice-cavern yeti finale.",
+  "features": [
+   "Snowboard down snowy slopes",
+   "Swim past jellyfish and narwhals",
+   "Speed boosts and coin trails",
+   "Power-ups in an icy cavern",
+   "Ice yeti finale, level complete",
+   "End-of-run results screen"
+  ],
+  "vertical": true,
+  "big": true,
+  "featured": true,
+  "link": null,
+  "loop": "assets/work/pixel_game/loop.mp4",
+  "poster": "assets/work/pixel_game/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/pixel_game/full.mp4"
   }
  },
  {
@@ -450,8 +450,8 @@ window.PROJECTS = [
    "Fight armored demons in fiery canyons"
   ],
   "vertical": false,
-  "big": false,
-  "featured": false,
+  "big": true,
+  "featured": true,
   "link": [
    "Meta Quest store",
    "https://www.meta.com/experiences/6620771114718251/"

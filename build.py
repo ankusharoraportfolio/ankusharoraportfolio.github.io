@@ -98,12 +98,12 @@ PROJECTS.update({
 })
 
 # Display order: newest and most polished first. Projects not listed go to the end.
-ORDER = ["Pixel_Game", "Perfect_Hit", "Flap_Word", "Aviation_Maintenance_Sim", "Target_Strike", "Prize_Drop", "Word_Trail", "Prize_Match", "Soccer_Splatter", "Paint_Splat",
+ORDER = ["Perfect_Hit", "Pixel_Game", "Flap_Word", "Aviation_Maintenance_Sim", "Target_Strike", "Prize_Drop", "Word_Trail", "Prize_Match", "Soccer_Splatter", "Paint_Splat",
          "Ice_Hockey", "Rollercoaster", "Cash_Cow", "Number_Rangers", "Jet_Engine_VR", "NIA_Human_Anatomy",
          "Vulcan_Tower_Defense", "Tartarus_VR", "Sinverse", "Vulcan_Runner", "AR_Car_Controller", "Server_Hardware_VR",
          "HP_Server_VR", "AirportVerse", "VR_Wellbeing", "CC_Bio", "Celebrity_Golf", "Chuck_The_Sallar", "Horror_Survivor",
          "Stellar_Void", "Open_Season", "Shooting_Game_POC", "Postal_Pete", "AR_Furniture", "Poker"]
-BIG = {"Pixel_Game", "Perfect_Hit", "Aviation_Maintenance_Sim", "Vulcan_Tower_Defense"}
+BIG = {"Pixel_Game", "Perfect_Hit", "Tartarus_VR", "Aviation_Maintenance_Sim", "Vulcan_Tower_Defense"}
 
 CATEGORIES = [("all", "All work"), ("xr", "XR & Simulation"), ("multi", "Multiplayer"), ("booth", "Booth & Events"), ("games", "Mobile & PC Games")]
 

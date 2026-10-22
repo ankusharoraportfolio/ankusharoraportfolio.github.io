@@ -16,7 +16,7 @@
     return n;
   }
 
-  function card(p) {
+  function card(p, inFeatured) {
     const media = el("div", { class: "media" + (p.vertical ? " vertical" : "") });
     if (p.vertical) {
       const bd = el("div", { class: "backdrop" });
@@ -28,7 +28,6 @@
     vid.muted = true;
     vid.dataset.src = p.loop;
     media.appendChild(vid);
-    if (p.featured) media.appendChild(el("span", { class: "badge star", text: "Featured" }));
     media.appendChild(el("span", { class: "badge", text: label(p.cat) }));
 
     const meta = [p.company, p.year].filter(Boolean).join(" · ");
@@ -37,7 +36,7 @@
       el("p", { text: p.kicker }),
       meta ? el("p", { class: "meta", text: meta }) : null);
 
-    const c = el("button", { class: "card" + (p.big ? " big" : ""), type: "button", "data-cat": p.cat, "aria-label": `Open ${p.title}` }, media, body);
+    const c = el("button", { class: "card" + (inFeatured && p === projects.find((x) => x.featured) ? " big" : ""), type: "button", "data-cat": p.cat, "aria-label": `Open ${p.title}` }, media, body);
     const play = () => { if (!vid.src) vid.src = vid.dataset.src; vid.play().then(() => c.classList.add("playing")).catch(() => {}); };
     const stop = () => { vid.pause(); c.classList.remove("playing"); };
     if (canHover) { c.addEventListener("mouseenter", play); c.addEventListener("mouseleave", stop); }
@@ -47,26 +46,40 @@
 
   function label(cat) { return (window.CATEGORIES.find(([k]) => k === cat) || [, ""])[1]; }
 
-  // Filters
+  // Layout: a featured row, then one section per genre. Filters show a single genre.
+  const GENRE_ORDER = ["booth", "xr", "multi", "games"];
+  function section(title, list, featured) {
+    const g = el("div", { class: "grid" + (featured ? " featured" : "") });
+    list.forEach((p) => g.appendChild(card(p, featured)));
+    return el("div", { class: "genre" }, title ? el("h3", { class: "genre-title", text: `${title} · ${list.length}` }) : null, g);
+  }
+  function render(key) {
+    grid.innerHTML = "";
+    if (key === "all") {
+      grid.appendChild(section("Featured", projects.filter((p) => p.featured), true));
+      GENRE_ORDER.forEach((c) => grid.appendChild(section(label(c), projects.filter((p) => p.cat === c && !p.featured), false)));
+    } else {
+      grid.appendChild(section(null, projects.filter((p) => p.cat === key), false));
+    }
+    observeCards();
+  }
   window.CATEGORIES.forEach(([key, name], i) => {
     const b = el("button", { type: "button", role: "tab", "aria-selected": i === 0 ? "true" : "false", text: name });
     b.addEventListener("click", () => {
       filters.querySelectorAll("button").forEach((x) => x.setAttribute("aria-selected", x === b ? "true" : "false"));
-      grid.querySelectorAll(".card").forEach((c) => { c.hidden = key !== "all" && c.dataset.cat !== key; });
+      render(key);
     });
     filters.appendChild(b);
   });
-  projects.forEach((p) => grid.appendChild(card(p)));
 
   // Touch devices: play loops when cards scroll into view
-  if (!canHover && "IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
-      const v = e.target.querySelector("video");
-      if (e.isIntersecting && e.intersectionRatio > 0.6) { if (!v.src) v.src = v.dataset.src; v.play().then(() => e.target.classList.add("playing")).catch(() => {}); }
-      else { v.pause(); e.target.classList.remove("playing"); }
-    }), { threshold: [0, 0.6] });
-    grid.querySelectorAll(".card").forEach((c) => io.observe(c));
-  }
+  const io = !canHover && "IntersectionObserver" in window ? new IntersectionObserver((entries) => entries.forEach((e) => {
+    const v = e.target.querySelector("video");
+    if (e.isIntersecting && e.intersectionRatio > 0.6) { if (!v.src) v.src = v.dataset.src; v.play().then(() => e.target.classList.add("playing")).catch(() => {}); }
+    else { v.pause(); e.target.classList.remove("playing"); }
+  }), { threshold: [0, 0.6] }) : null;
+  function observeCards() { if (io) grid.querySelectorAll(".card").forEach((c) => io.observe(c)); }
+  render("all");
 
   // Case-study videos play when visible
   if ("IntersectionObserver" in window) {
