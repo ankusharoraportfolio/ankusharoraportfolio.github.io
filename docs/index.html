@@ -15,12 +15,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=1792707799">
+<link rel="stylesheet" href="styles.css?v=1792707890">
 </head>
 <body>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="bg" aria-hidden="true"></canvas>
 
 <header class="nav" id="top">
-  <a class="brand" href="#top">Ankush<span>.</span>Arora</a>
+  <a class="brand" href="#top"><span class="mono">AA</span><span class="brand-name">Ankush Arora</span></a>
   <nav>
     <a href="#work">Work</a>
     <a href="#case-studies">Case studies</a>
@@ -28,7 +30,7 @@
     <a href="#contact">Contact</a>
     <a href="https://www.linkedin.com/in/ankush-arora-a0268992/" target="_blank" rel="noopener">LinkedIn</a>
   </nav>
-  <a class="btn btn-small" href="assets/Ankush_Arora_CV.pdf" download>Download CV</a>
+  <a class="btn btn-nav" href="assets/Ankush_Arora_CV.pdf" download>Download CV</a>
 </header>
 
 <section class="hero">
@@ -37,8 +39,9 @@
   </video>
   <div class="hero-shade"></div>
   <div class="wrap hero-inner">
-    <p class="eyebrow">Principal Engineer / Technical Lead</p>
-    <h1>I build real-time 3D, XR and multiplayer systems — and lead the teams that ship them.</h1>
+    <p class="eyebrow">Principal Engineer · Technical Lead · XR &amp; Real-Time Systems</p>
+    <h1 class="name">Ankush <span>Arora</span></h1>
+    <p class="tagline">I build real-time 3D, XR and multiplayer systems — and lead the teams that ship them.</p>
     <p class="lead">15+ years in Unity and C#. Led a 25-member team delivering VR training for aviation, healthcare and government clients. Today I architect a configurable platform that powers branded games at US trade shows.</p>
     <div class="cta">
       <a class="btn" href="#work">View work</a>
@@ -56,7 +59,7 @@
 
 <section class="section" id="work">
   <div class="wrap">
-    <div class="section-head">
+    <div class="reveal section-head">
       <p class="eyebrow">Selected work</p>
       <h2>Projects</h2>
       <p class="muted">Hover a project to preview it. Click to watch the full video with sound.</p>
@@ -68,12 +71,12 @@
 
 <section class="section alt" id="case-studies">
   <div class="wrap">
-    <div class="section-head">
+    <div class="reveal section-head">
       <p class="eyebrow">How I work</p>
       <h2>Case studies</h2>
     </div>
 
-    <article class="case">
+    <article class="reveal case">
       <div class="case-text">
         <p class="tag">Fierce Guppy Game Labs · 2025 – present</p>
         <h3>FG Booth Control — one platform, many branded games</h3>
@@ -112,7 +115,7 @@
       </figure>
     </article>
 
-    <article class="case">
+    <article class="reveal case">
       <div class="case-text">
         <p class="tag">Ediiie · 2023 – 2024</p>
         <h3>Leading a 25-member team through VR training delivery</h3>
@@ -140,7 +143,7 @@
     <div>
       <p class="eyebrow">Career</p>
       <h2>Experience</h2>
-      <ol class="timeline">
+      <ol class="reveal timeline">
         <li><span class="when">2025 – now</span><b>Technical Lead</b> · Fierce Guppy Game Labs<p>Booth game platform, multiplayer, PlayFab backend, telemetry.</p></li>
         <li><span class="when">2023 – 2024</span><b>Lead Unity Developer (Technical Lead, 25-member team)</b> · Ediiie<p>VR training and simulation, published games, team and delivery ownership.</p></li>
         <li><span class="when">2019 – 2023</span><b>Senior Unity Developer</b> · Orbit Technical Solutions<p>Procedural runner engine, Bezier path generation, runtime meshes, Shader Graph.</p></li>
@@ -152,7 +155,7 @@
     <div>
       <p class="eyebrow">Toolkit</p>
       <h2>Skills</h2>
-      <div class="skills">
+      <div class="reveal skills">
         <h4>Architecture &amp; leadership</h4>
         <p class="chips"><span>System design</span><span>Event-driven architecture</span><span>State machines</span><span>Data-driven config</span><span>Team leadership</span><span>Agile / Scrum</span><span>Mentoring</span></p>
         <h4>Engine</h4>
@@ -164,7 +167,7 @@
         <h4>Platforms</h4>
         <p class="chips"><span>iOS</span><span>Android</span><span>Meta Quest</span><span>Windows / macOS</span><span>WebGL</span></p>
       </div>
-      <div class="award">
+      <div class="reveal award">
         <span class="award-icon" aria-hidden="true">★</span>
         <div><b>Gladiator of the Year — Ediiie</b><p>Voted best team lead and developer of the year out of 40 leads and developers.</p></div>
       </div>
@@ -200,7 +203,8 @@
   </div>
 </dialog>
 
-<script src="projects.js?v=1792707799"></script>
-<script src="app.js?v=1792707799"></script>
+<script src="projects.js?v=1792707890"></script>
+<script src="bg.js?v=2"></script>
+<script src="app.js?v=1792707890"></script>
 </body>
 </html>
