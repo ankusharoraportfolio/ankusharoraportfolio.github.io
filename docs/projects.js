@@ -1,5 +1,31 @@
 window.PROJECTS = [
  {
+  "slug": "perfect_hit",
+  "title": "Perfect Hit",
+  "kicker": "Trade-Show Booth Game · Unity",
+  "cat": "booth",
+  "company": "Fierce Guppy Game Labs",
+  "year": "2025",
+  "summary": "Booth game on the FG Booth Control platform with timed rounds, lead capture form and a live leaderboard.",
+  "features": [
+   "Every player registers before they play",
+   "Get-ready countdown explains the controls",
+   "Fire the cannon at glowing letters in order",
+   "Word bonus, plus Perfect for zero misses",
+   "Each level adds longer words and decoys",
+   "Streak multiplier rewards every hit in a row",
+   "60-second rounds end on Time's Up",
+   "Final score card, then the live leaderboard"
+  ],
+  "vertical": false,
+  "big": true,
+  "featured": true,
+  "link": null,
+  "loop": "assets/work/perfect_hit/loop.mp4",
+  "poster": "assets/work/perfect_hit/poster.jpg",
+  "full": null
+ },
+ {
   "slug": "flap_word",
   "title": "Flap Word",
   "kicker": "Trade-Show Booth Game · Unity",
@@ -34,12 +60,13 @@ window.PROJECTS = [
   "year": "2023–24",
   "summary": "VR maintenance training for an EASA-certified aviation training centre — 150+ mechanical modules such as the jet engine, each with Learn and Practice modes and a proficiency score.",
   "features": [
-   "Pick a task, then train in Learn or Practice mode",
-   "Step-by-step task checklist on a virtual tablet",
-   "Fill the bucket with water at the hangar sink",
-   "Spray detergent and scrub the windshield",
-   "Wipe dry with a chamois for a clear finish",
-   "Proficiency score for time, accuracy and safety"
+   "Task: clean the aircraft windshield, in Learn or Practice mode",
+   "A tablet checklist lists every step of the procedure",
+   "Step 1 — Fill a bucket with water at the hangar sink",
+   "Step 2 — Rinse the windshield with a wet cleaning cloth",
+   "Step 3 — Spray detergent and scrub the windshield",
+   "Step 4 — Wipe the windshield dry with a chamois",
+   "Result — scored on time, accuracy and safety"
   ],
   "vertical": false,
   "big": true,
