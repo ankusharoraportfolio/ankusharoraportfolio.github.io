@@ -169,6 +169,32 @@ window.PROJECTS = [
   }
  },
  {
+  "slug": "lane_word",
+  "title": "Lane Word",
+  "kicker": "Trade-Show Booth Game · Unity",
+  "cat": "booth",
+  "company": "Fierce Guppy Game Labs",
+  "year": "2025",
+  "summary": "Lane-based word game for trade-show booths, built on the FG Booth Control platform.",
+  "features": [
+   "Switch lanes to grab the word's letters in order",
+   "Word complete: +200 bonus, then a new word",
+   "Streak counter climbs with every letter caught",
+   "Robots and crates block the lanes",
+   "Time's up: the final score locks in"
+  ],
+  "vertical": false,
+  "big": false,
+  "featured": false,
+  "link": null,
+  "loop": "assets/work/lane_word/loop.mp4",
+  "poster": "assets/work/lane_word/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/lane_word/full.mp4"
+  }
+ },
+ {
   "slug": "word_trail",
   "title": "Word Trail",
   "kicker": "Trade-Show Booth Game · Unity",
@@ -414,10 +440,14 @@ window.PROJECTS = [
   "year": "2023–24",
   "summary": "Real-time tower defense in a Greek-Roman myth world — 12 levels, 14 towers and endless waves. Reached 50,000+ downloads within 2 months.",
   "features": [
-   "A Greek temple ringed by snow, forest and desert",
-   "Enemy waves march in along the roads",
-   "A hero beast battles the invaders",
-   "Endless waves with gold, lives and kill counters"
+   "Tap a tower to upgrade or sell it",
+   "Towers fire on enemies crossing the snow",
+   "Forest map with a long winding road",
+   "Pick consumables, skills and a hero beast",
+   "Endless mode: Vulcanite City under siege",
+   "Skills call fire strikes onto the road",
+   "Towers and soldiers battle wave after wave",
+   "Wave 4: gold, lives and kills keep climbing"
   ],
   "vertical": false,
   "big": true,
@@ -744,16 +774,16 @@ window.PROJECTS = [
  {
   "slug": "stellar_void",
   "title": "Stellar Void",
-  "kicker": "Space Shooter · Mobile · Unity",
-  "cat": "games",
+  "kicker": "Multiplayer Space Shooter · Dedicated Servers · Unity",
+  "cat": "multi",
   "company": "",
   "year": "",
-  "summary": "Mobile space shooter with ship customisation, cockpit flight through asteroid fields and dogfights.",
+  "summary": "Multiplayer mobile space shooter running on dedicated game servers hosted on Edgegap: ship customisation, cockpit flight through asteroid fields and online dogfights.",
   "features": [
    "Hangar menu: Training, Multiplayer, Customisation",
    "Ship customisation with swappable skins",
    "Cockpit view through a dense asteroid field",
-   "Dogfights against enemy fighter ships",
+   "Online dogfights on dedicated servers",
    "Explosions and shield effects in combat"
   ],
   "vertical": false,

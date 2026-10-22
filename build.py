@@ -69,8 +69,8 @@ PROJECTS = {
         summary="Endless runner: outrun the Fat Lazy Cop through the city, dodge traffic and clear level targets."),
     "Horror_Survivor": dict(cat="games", company="Ediiie", year="2023–24",
         summary="First-person survival horror with flashlight exploration, zombie hordes and an AI fox companion."),
-    "Stellar_Void": dict(cat="games", company="", year="",
-        summary="Mobile space shooter with ship customisation, cockpit flight through asteroid fields and dogfights."),
+    "Stellar_Void": dict(cat="multi", company="", year="",
+        summary="Multiplayer mobile space shooter running on dedicated game servers hosted on Edgegap: ship customisation, cockpit flight through asteroid fields and online dogfights."),
     "Pixel_Game": dict(cat="games", company="", year="",
         summary="Handheld-style pixel-art arcade game with themed levels: snowboarding, underwater and an ice-cavern yeti finale."),
 }
@@ -84,6 +84,8 @@ PROJECTS.update({
         summary="Digital Plinko for trade-show booths: tap to drop the puck and win prizes, with an operator panel to set prize odds and stock."),
     "Target_Strike": dict(cat="booth", company="Fierce Guppy Game Labs", year="2025",
         summary="Fast reaction booth game: hit targets before they expire, chain combos as difficulty ramps up, with operator-selectable themes."),
+    "Lane_Word": dict(cat="booth", company="Fierce Guppy Game Labs", year="2025",
+        summary="Lane-based word game for trade-show booths, built on the FG Booth Control platform."),
     "Word_Trail": dict(cat="booth", company="Fierce Guppy Game Labs", year="2025",
         summary="Word-trail booth game with themed worlds, built on the FG Booth Control platform."),
 })
@@ -98,7 +100,7 @@ PROJECTS.update({
 })
 
 # Display order: newest and most polished first. Projects not listed go to the end.
-ORDER = ["Perfect_Hit", "Pixel_Game", "Flap_Word", "Aviation_Maintenance_Sim", "Target_Strike", "Prize_Drop", "Word_Trail", "Prize_Match", "Soccer_Splatter", "Paint_Splat",
+ORDER = ["Perfect_Hit", "Pixel_Game", "Flap_Word", "Aviation_Maintenance_Sim", "Target_Strike", "Prize_Drop", "Lane_Word", "Word_Trail", "Prize_Match", "Soccer_Splatter", "Paint_Splat",
          "Ice_Hockey", "Rollercoaster", "Cash_Cow", "Number_Rangers", "Jet_Engine_VR", "NIA_Human_Anatomy",
          "Vulcan_Tower_Defense", "Tartarus_VR", "Sinverse", "Vulcan_Runner", "AR_Car_Controller", "Server_Hardware_VR",
          "HP_Server_VR", "AirportVerse", "VR_Wellbeing", "CC_Bio", "Celebrity_Golf", "Chuck_The_Sallar", "Horror_Survivor",
