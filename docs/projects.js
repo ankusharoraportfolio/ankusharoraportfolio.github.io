@@ -141,6 +141,34 @@ window.PROJECTS = [
   }
  },
  {
+  "slug": "prize_drop",
+  "title": "Prize Drop",
+  "kicker": "Trade-Show Booth Game · Unity",
+  "cat": "booth",
+  "company": "Fierce Guppy Game Labs",
+  "year": "2025",
+  "summary": "Digital Plinko for trade-show booths: tap to drop the puck and win prizes, with an operator panel to set prize odds and stock.",
+  "features": [
+   "Quick lead registration",
+   "Tap to drop the puck",
+   "Swag Bag participation prize",
+   "Bins for every prize tier",
+   "Grand prize: Premium Pass",
+   "Operators set prize stock and odds",
+   "Queue a forced prize for the next drop"
+  ],
+  "vertical": false,
+  "big": false,
+  "featured": false,
+  "link": null,
+  "loop": "assets/work/prize_drop/loop.mp4",
+  "poster": "assets/work/prize_drop/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/prize_drop/full.mp4"
+  }
+ },
+ {
   "slug": "word_trail",
   "title": "Word Trail",
   "kicker": "Trade-Show Booth Game · Unity",
