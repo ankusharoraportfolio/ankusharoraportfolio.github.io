@@ -36,7 +36,7 @@
       el("p", { text: p.kicker }),
       meta ? el("p", { class: "meta", text: meta }) : null);
 
-    const c = el("button", { class: "card" + (inFeatured && p === projects.find((x) => x.featured) ? " big" : ""), type: "button", "data-cat": p.cat, "aria-label": `Open ${p.title}` }, media, body);
+    const c = el("button", { class: "card" + (inFeatured && p === projects.find((x) => x.featured) ? " big" : "") + (p.vertical ? " tall" : ""), type: "button", "data-cat": p.cat, "aria-label": `Open ${p.title}` }, media, body);
     const play = () => { if (!vid.src) vid.src = vid.dataset.src; vid.play().then(() => c.classList.add("playing")).catch(() => {}); };
     const stop = () => { vid.pause(); c.classList.remove("playing"); };
     if (canHover) { c.addEventListener("mouseenter", play); c.addEventListener("mouseleave", stop); }
