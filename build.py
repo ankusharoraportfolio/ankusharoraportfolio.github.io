@@ -12,7 +12,7 @@ from PIL import Image
 
 HOME = os.path.expanduser("~")
 VIDEOS = f"{HOME}/Desktop/Portfolio_Videos"
-SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "site")
+SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs")
 PREVIEW = "--preview" in sys.argv
 
 # Curated details per project (spec "name" -> details). Projects not listed here are not published.
