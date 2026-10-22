@@ -90,7 +90,9 @@
   // Modal
   const modal = document.getElementById("modal");
   const mMedia = document.getElementById("m-media");
+  let current = -1;
   function open(p) {
+    current = projects.indexOf(p);
     mMedia.innerHTML = "";
     mMedia.className = "m-media" + (p.vertical && (!p.full || p.full.type !== "youtube") ? " vertical" : "");
     if (p.full && p.full.type === "youtube") {
@@ -112,10 +114,30 @@
     links.innerHTML = "";
     if (p.full && p.full.type === "youtube") links.appendChild(el("a", { class: "btn btn-ghost", href: `https://www.youtube.com/watch?v=${p.full.id}`, target: "_blank", rel: "noopener", text: "Watch on YouTube" }));
     if (p.link) links.appendChild(el("a", { class: "btn btn-ghost", href: p.link[1], target: "_blank", rel: "noopener", text: p.link[0] }));
-    modal.showModal();
+    if (!modal.open) modal.showModal();
   }
   function close() { mMedia.innerHTML = ""; modal.close(); }
+  function step(d) { if (current < 0) return; open(projects[(current + d + projects.length) % projects.length]); }
+  document.getElementById("m-prev").addEventListener("click", () => step(-1));
+  document.getElementById("m-next").addEventListener("click", () => step(1));
+  document.addEventListener("keydown", (e) => { if (!modal.open) return; if (e.key === "ArrowRight") step(1); if (e.key === "ArrowLeft") step(-1); });
   document.getElementById("m-close").addEventListener("click", close);
   modal.addEventListener("click", (e) => { if (e.target === modal) close(); });
   modal.addEventListener("cancel", (e) => { e.preventDefault(); close(); });
+})();
+
+// Animated stat counters + back-to-top button
+(function () {
+  const els = document.querySelectorAll("[data-count]");
+  const run = (el) => {
+    const end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now(), dur = 1400;
+    const tick = (t) => { const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(end * e) + suf; if (k < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  };
+  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }), { threshold: .6 });
+    els.forEach((el) => io.observe(el));
+  }
+  const top = document.querySelector(".to-top");
+  addEventListener("scroll", () => top && top.classList.toggle("show", scrollY > 900), { passive: true });
 })();

@@ -204,3 +204,12 @@ section, .footer, main { position: relative; z-index: 1; }
 @media (max-width: 960px) { .nav { padding: 12px 18px; } .brand { font-size: 1.2rem; } .mono { width: 38px; height: 38px; } }
 @media (max-width: 620px) { .brand-name { display: none; } .btn-nav { padding: 10px 16px; font-size: .92rem; } }
 @media (prefers-reduced-motion: reduce) { .aurora span, .name span { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } #bg { display: none; } }
+
+/* Modal prev/next, back-to-top, contact note */
+.m-nav { position: absolute; top: 34%; z-index: 3; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,.2); background: rgba(7,9,15,.65); color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer; }
+.m-nav.prev { left: 12px; } .m-nav.next { right: 12px; }
+.m-nav:hover, .close:hover { background: var(--accent); color: #031018; }
+.to-top { position: fixed; right: 22px; bottom: 22px; z-index: 30; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; text-decoration: none; font-size: 1.3rem; color: #031018; background: var(--accent); box-shadow: 0 8px 30px rgba(0,200,255,.35); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s, transform .25s; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.tz { margin-top: 18px; font-size: .95rem; }
+.stats dt { font-variant-numeric: tabular-nums; }
