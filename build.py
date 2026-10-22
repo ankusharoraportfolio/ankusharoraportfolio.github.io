@@ -166,6 +166,13 @@ def main():
     cv = f"{HOME}/Desktop/CV_Final/Ankush_Arora_CV_2026.pdf"
     if os.path.exists(cv):
         shutil.copy2(cv, os.path.join(SITE, "assets", "Ankush_Arora_CV.pdf"))
+    # Cache-busting: version the CSS/JS links so browsers always load the latest files after a publish.
+    import re, time
+    idx = os.path.join(SITE, "index.html")
+    html = open(idx).read()
+    v = str(int(time.time()))
+    html = re.sub(r'(href|src)="(styles\.css|app\.js|projects\.js)(\?v=\d+)?"', lambda m: f'{m.group(1)}="{m.group(2)}?v={v}"', html)
+    open(idx, "w").write(html)
     print(f"{len(out)} projects -> {SITE}")
 
 
