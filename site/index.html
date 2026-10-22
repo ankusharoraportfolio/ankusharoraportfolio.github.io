@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankush Arora — Principal Engineer / Technical Lead</title>
+<meta name="description" content="Ankush Arora — 15+ years building real-time 3D, XR, simulation and multiplayer products in Unity. Technical lead of a 25-member team. Portfolio, case studies and CV.">
+<meta property="og:title" content="Ankush Arora — Real-Time Systems, XR & Simulation">
+<meta property="og:description" content="15+ years building real-time 3D, XR, simulation and multiplayer products. Portfolio and case studies.">
+<meta property="og:image" content="assets/work/aviation_maintenance_sim/poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top">Ankush<span>.</span>Arora</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#case-studies">Case studies</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="btn btn-small" href="assets/Ankush_Arora_CV.pdf" download>Download CV</a>
+</header>
+
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/work/aviation_maintenance_sim/poster.jpg">
+    <source src="assets/work/aviation_maintenance_sim/loop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Principal Engineer / Technical Lead</p>
+    <h1>I build real-time 3D, XR and multiplayer systems — and lead the teams that ship them.</h1>
+    <p class="lead">15+ years in Unity and C#. Led a 25-member team delivering VR training for aviation, healthcare and government clients. Today I architect a configurable platform that powers branded games at US trade shows.</p>
+    <div class="cta">
+      <a class="btn" href="#work">View work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+    <dl class="stats">
+      <div><dt>15+</dt><dd>years in real-time 3D</dd></div>
+      <div><dt>25</dt><dd>person team led</dd></div>
+      <div><dt>150+</dt><dd>VR training modules</dd></div>
+      <div><dt>50K+</dt><dd>downloads in 2 months</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Projects</h2>
+      <p class="muted">Hover a project to preview it. Click for details and the full video.</p>
+    </div>
+    <div class="filters" role="tablist" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="section alt" id="case-studies">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How I work</p>
+      <h2>Case studies</h2>
+    </div>
+
+    <article class="case">
+      <div class="case-text">
+        <p class="tag">Fierce Guppy Game Labs · 2025 – present</p>
+        <h3>FG Booth Control — one platform, many branded games</h3>
+        <p><b>Problem.</b> US clients run marketing games at trade-show booths. Each event needs its own branding, rules, timings and lead capture — and the booth has to work even when the venue Wi-Fi doesn't.</p>
+        <p><b>What I built.</b> A reusable platform that runs around 10 games from one shared codebase:</p>
+        <ul class="ticks">
+          <li>JSON-driven configuration: gameplay rules, timings, branding, themes and registration change without a new build</li>
+          <li>Booth flow as a configurable state machine — attract, register, play, game over, leaderboard</li>
+          <li>Companion registration tablet with a player queue, auto-discovered over the local network</li>
+          <li>PlayFab leaderboards and player data, with an offline mode and CSV lead export</li>
+          <li>Licence management to control deployments per client</li>
+        </ul>
+        <p><b>Result.</b> New branded games ship by configuring and skinning the platform instead of rebuilding the booth stack for every event.</p>
+      </div>
+      <figure class="diagram" aria-label="Booth platform architecture">
+        <svg viewBox="0 0 520 380" role="img">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="arrowhead"/></marker>
+          </defs>
+          <g class="node accent"><rect x="170" y="20" width="180" height="56" rx="12"/><text x="260" y="44">JSON configuration</text><text x="260" y="62" class="sub">rules · timing · branding</text></g>
+          <g class="node core"><rect x="150" y="140" width="220" height="74" rx="14"/><text x="260" y="168">Booth Control</text><text x="260" y="188" class="sub">state machine · game host</text></g>
+          <g class="node"><rect x="10" y="150" width="112" height="56" rx="12"/><text x="66" y="174">Registration</text><text x="66" y="192" class="sub">tablet · queue</text></g>
+          <g class="node"><rect x="398" y="150" width="112" height="56" rx="12"/><text x="454" y="174">Licence</text><text x="454" y="192" class="sub">per client</text></g>
+          <g class="node"><rect x="20" y="290" width="140" height="64" rx="12"/><text x="90" y="316">Branded games</text><text x="90" y="334" class="sub">~10 titles</text></g>
+          <g class="node"><rect x="190" y="290" width="140" height="64" rx="12"/><text x="260" y="316">PlayFab</text><text x="260" y="334" class="sub">leaderboards · data</text></g>
+          <g class="node"><rect x="360" y="290" width="140" height="64" rx="12"/><text x="430" y="316">Offline mode</text><text x="430" y="334" class="sub">CSV lead export</text></g>
+          <path class="edge" d="M260 76 V136" marker-end="url(#ar)"/>
+          <path class="edge" d="M122 178 H146" marker-end="url(#ar)"/>
+          <path class="edge" d="M398 178 H374" marker-end="url(#ar)"/>
+          <path class="edge" d="M210 214 L110 286" marker-end="url(#ar)"/>
+          <path class="edge" d="M260 214 V286" marker-end="url(#ar)"/>
+          <path class="edge" d="M310 214 L410 286" marker-end="url(#ar)"/>
+          <text x="66" y="140" class="edge-label">LAN discovery</text>
+        </svg>
+        <figcaption>Platform architecture (simplified)</figcaption>
+      </figure>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <p class="tag">Ediiie · 2023 – 2024</p>
+        <h3>Leading a 25-member team through VR training delivery</h3>
+        <p><b>Context.</b> An XR studio delivering training and simulation for international, enterprise and government clients — several projects in parallel.</p>
+        <ul class="ticks">
+          <li>Managed developers, technical artists, QA, designers and a producer</li>
+          <li>Owned the pipeline end to end: requirements → design → art → development → QA → client handover (Agile/Scrum and Waterfall)</li>
+          <li>VR aviation maintenance simulator for an EASA-certified training centre — 150+ mechanical modules</li>
+          <li>NIA Human Anatomy for a Rajasthan Government project — all 11 body systems</li>
+          <li>Vulcan's Tower Defense — 50,000+ downloads within 2 months of launch</li>
+        </ul>
+        <p><b>Recognition.</b> Named <em>Gladiator of the Year</em> — best team lead and developer of the year, out of 40 leads and developers.</p>
+      </div>
+      <div class="case-media">
+        <video muted loop playsinline preload="none" poster="assets/work/aviation_maintenance_sim/poster.jpg" data-autoplay>
+          <source src="assets/work/aviation_maintenance_sim/loop.mp4" type="video/mp4">
+        </video>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow">Career</p>
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li><span class="when">2025 – now</span><b>Technical Lead</b> · Fierce Guppy Game Labs<p>Booth game platform, multiplayer, PlayFab backend, telemetry.</p></li>
+        <li><span class="when">2023 – 2024</span><b>Lead Unity Developer (Technical Lead, 25-member team)</b> · Ediiie<p>VR training and simulation, published games, team and delivery ownership.</p></li>
+        <li><span class="when">2019 – 2023</span><b>Senior Unity Developer</b> · Orbit Technical Solutions<p>Procedural runner engine, Bezier path generation, runtime meshes, Shader Graph.</p></li>
+        <li><span class="when">2018 – 2019</span><b>Lead Unity Developer</b> · Techmoweb Experts<p>Multiplayer card-game platform with Poker and other card games.</p></li>
+        <li><span class="when">2016 – 2018</span><b>Lead Unity Developer</b> · Igniva Solutions<p>Endless runner and multiplayer golf; mentoring and feature ownership.</p></li>
+        <li><span class="when">2011 – 2015</span><b>Senior Associate → Senior Unity Developer</b> · Seasia Infotech, Dekh! Dekh! India<p>2D/3D mobile games and in-chat mini-games.</p></li>
+      </ol>
+    </div>
+    <div>
+      <p class="eyebrow">Toolkit</p>
+      <h2>Skills</h2>
+      <div class="skills">
+        <h4>Architecture &amp; leadership</h4>
+        <p class="chips"><span>System design</span><span>Event-driven architecture</span><span>State machines</span><span>Data-driven config</span><span>Team leadership</span><span>Agile / Scrum</span><span>Mentoring</span></p>
+        <h4>Engine</h4>
+        <p class="chips"><span>Unity (URP, HDRP)</span><span>C#</span><span>Shader Graph</span><span>Procedural meshes</span><span>3D math</span><span>Profiling</span></p>
+        <h4>XR</h4>
+        <p class="chips"><span>Meta Quest VR</span><span>AR with LiDAR</span><span>WebXR / 8th Wall</span><span>Training simulations</span></p>
+        <h4>Networking &amp; backend</h4>
+        <p class="chips"><span>Photon Fusion</span><span>FishNet</span><span>Socket.IO</span><span>PlayFab</span><span>Firebase</span><span>REST</span><span>Docker</span></p>
+        <h4>Platforms</h4>
+        <p class="chips"><span>iOS</span><span>Android</span><span>Meta Quest</span><span>Windows / macOS</span><span>WebGL</span></p>
+      </div>
+      <div class="award">
+        <span class="award-icon" aria-hidden="true">★</span>
+        <div><b>Gladiator of the Year — Ediiie</b><p>Voted best team lead and developer of the year out of 40 leads and developers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Let's build something real-time.</h2>
+    <p class="lead">Open to technical lead, principal engineer and architect roles — on-site, relocation or remote.</p>
+    <div class="cta">
+      <a class="btn" href="mailto:ankusharora0020@gmail.com">ankusharora0020@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/ankush-arora-a0268992/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="assets/Ankush_Arora_CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="wrap">© <span id="year"></span> Ankush Arora · Zirakpur (Chandigarh Tricity), India</div></footer>
+
+<dialog class="modal" id="modal" aria-labelledby="m-title">
+  <button class="close" id="m-close" aria-label="Close">×</button>
+  <div class="m-media" id="m-media"></div>
+  <div class="m-body">
+    <p class="tag" id="m-tag"></p>
+    <h3 id="m-title"></h3>
+    <p class="muted" id="m-kicker"></p>
+    <p id="m-summary"></p>
+    <ul class="ticks" id="m-features"></ul>
+    <div class="cta" id="m-links"></div>
+  </div>
+</dialog>
+
+<script src="projects.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
