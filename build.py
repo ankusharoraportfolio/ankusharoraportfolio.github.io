@@ -7,7 +7,7 @@ Usage:
 Reads each video spec in ~/Desktop/Portfolio_Videos/_Tools/*.json, copies the silent loop and a
 web-sized poster into site/assets/work/<slug>/, and writes site/projects.js.
 """
-import json, glob, os, shutil, sys
+import json, glob, os, shutil, subprocess, sys
 from PIL import Image
 
 HOME = os.path.expanduser("~")
@@ -89,12 +89,12 @@ PROJECTS.update({
 })
 
 # Display order: newest and most polished first. Projects not listed go to the end.
-ORDER = ["Perfect_Hit", "Flap_Word", "Aviation_Maintenance_Sim", "Target_Strike", "Prize_Drop", "Word_Trail", "Prize_Match", "Soccer_Splatter", "Paint_Splat",
+ORDER = ["Pixel_Game", "Perfect_Hit", "Flap_Word", "Aviation_Maintenance_Sim", "Target_Strike", "Prize_Drop", "Word_Trail", "Prize_Match", "Soccer_Splatter", "Paint_Splat",
          "Ice_Hockey", "Rollercoaster", "Cash_Cow", "Number_Rangers", "Jet_Engine_VR", "NIA_Human_Anatomy",
          "Vulcan_Tower_Defense", "Tartarus_VR", "Sinverse", "Vulcan_Runner", "AR_Car_Controller", "Server_Hardware_VR",
          "HP_Server_VR", "AirportVerse", "VR_Wellbeing", "CC_Bio", "Celebrity_Golf", "Chuck_The_Sallar", "Horror_Survivor",
-         "Stellar_Void", "Pixel_Game", "AR_Furniture", "Poker"]
-BIG = {"Perfect_Hit", "Aviation_Maintenance_Sim", "Vulcan_Tower_Defense"}
+         "Stellar_Void", "AR_Furniture", "Poker"]
+BIG = {"Pixel_Game", "Perfect_Hit", "Aviation_Maintenance_Sim", "Vulcan_Tower_Defense"}
 
 CATEGORIES = [("all", "All work"), ("xr", "XR & Simulation"), ("multi", "Multiplayer"), ("booth", "Booth & Events"), ("games", "Mobile & PC Games")]
 
@@ -132,8 +132,14 @@ def main():
         full = None
         if s["name"] in YOUTUBE:
             full = {"type": "youtube", "id": YOUTUBE[s["name"]]}
-        elif PREVIEW and os.path.exists(show):
-            full = {"type": "file", "src": "full/" + os.path.relpath(show, VIDEOS)}
+        elif os.path.exists(show):
+            # Web-sized copy of the full showcase (with sound), re-encoded only when the source is newer.
+            web = os.path.join(d, "full.mp4")
+            if not os.path.exists(web) or os.path.getmtime(web) < os.path.getmtime(show):
+                scale = "scale=720:1280" if vertical else "scale=1280:720"
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", show, "-vf", scale, "-c:v", "libx264", "-crf", "27",
+                                "-preset", "slow", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", web], check=True)
+            full = {"type": "file", "src": f"assets/work/{slug}/full.mp4"}
         out.append({
             "slug": slug, "title": s["title"], "kicker": " · ".join(p.strip() for p in s["kicker"].split("·")),
             "cat": meta["cat"], "company": meta.get("company", ""), "year": meta.get("year", ""),

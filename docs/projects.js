@@ -1,5 +1,32 @@
 window.PROJECTS = [
  {
+  "slug": "pixel_game",
+  "title": "Pixel Adventure",
+  "kicker": "Pixel-Art Arcade · Mobile · Unity",
+  "cat": "games",
+  "company": "",
+  "year": "",
+  "summary": "Handheld-style pixel-art arcade game with themed levels: snowboarding, underwater and an ice-cavern yeti finale.",
+  "features": [
+   "Snowboard down snowy slopes",
+   "Swim past jellyfish and narwhals",
+   "Speed boosts and coin trails",
+   "Power-ups in an icy cavern",
+   "Ice yeti finale, level complete",
+   "End-of-run results screen"
+  ],
+  "vertical": true,
+  "big": true,
+  "featured": true,
+  "link": null,
+  "loop": "assets/work/pixel_game/loop.mp4",
+  "poster": "assets/work/pixel_game/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/pixel_game/full.mp4"
+  }
+ },
+ {
   "slug": "perfect_hit",
   "title": "Perfect Hit",
   "kicker": "Trade-Show Booth Game · Unity",
@@ -23,7 +50,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/perfect_hit/loop.mp4",
   "poster": "assets/work/perfect_hit/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/perfect_hit/full.mp4"
+  }
  },
  {
   "slug": "flap_word",
@@ -49,7 +79,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/flap_word/loop.mp4",
   "poster": "assets/work/flap_word/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/flap_word/full.mp4"
+  }
  },
  {
   "slug": "aviation_maintenance_sim",
@@ -74,7 +107,38 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/aviation_maintenance_sim/loop.mp4",
   "poster": "assets/work/aviation_maintenance_sim/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/aviation_maintenance_sim/full.mp4"
+  }
+ },
+ {
+  "slug": "target_strike",
+  "title": "Target Strike",
+  "kicker": "Trade-Show Booth Game · Unity",
+  "cat": "booth",
+  "company": "Fierce Guppy Game Labs",
+  "year": "2025",
+  "summary": "Fast reaction booth game: hit targets before they expire, chain combos as difficulty ramps up, with operator-selectable themes.",
+  "features": [
+   "Players sign in, then a 3-2-1 countdown",
+   "Tap each target before it expires",
+   "Hit streaks build a combo multiplier",
+   "Difficulty ramps up for a frantic finish",
+   "Final score and rank",
+   "Operators pick a theme in the config panel",
+   "Same game, reskinned in the Ink Stamp theme"
+  ],
+  "vertical": false,
+  "big": false,
+  "featured": false,
+  "link": null,
+  "loop": "assets/work/target_strike/loop.mp4",
+  "poster": "assets/work/target_strike/poster.jpg",
+  "full": {
+   "type": "file",
+   "src": "assets/work/target_strike/full.mp4"
+  }
  },
  {
   "slug": "word_trail",
@@ -97,7 +161,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/word_trail/loop.mp4",
   "poster": "assets/work/word_trail/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/word_trail/full.mp4"
+  }
  },
  {
   "slug": "prize_match",
@@ -120,7 +187,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/prize_match/loop.mp4",
   "poster": "assets/work/prize_match/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/prize_match/full.mp4"
+  }
  },
  {
   "slug": "soccer_splatter",
@@ -143,7 +213,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/soccer_splatter/loop.mp4",
   "poster": "assets/work/soccer_splatter/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/soccer_splatter/full.mp4"
+  }
  },
  {
   "slug": "ice_hockey",
@@ -166,7 +239,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/ice_hockey/loop.mp4",
   "poster": "assets/work/ice_hockey/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/ice_hockey/full.mp4"
+  }
  },
  {
   "slug": "rollercoaster",
@@ -190,7 +266,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/rollercoaster/loop.mp4",
   "poster": "assets/work/rollercoaster/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/rollercoaster/full.mp4"
+  }
  },
  {
   "slug": "cash_cow",
@@ -214,7 +293,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/cash_cow/loop.mp4",
   "poster": "assets/work/cash_cow/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/cash_cow/full.mp4"
+  }
  },
  {
   "slug": "number_rangers",
@@ -236,7 +318,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/number_rangers/loop.mp4",
   "poster": "assets/work/number_rangers/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/number_rangers/full.mp4"
+  }
  },
  {
   "slug": "jet_engine_vr",
@@ -260,7 +345,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/jet_engine_vr/loop.mp4",
   "poster": "assets/work/jet_engine_vr/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/jet_engine_vr/full.mp4"
+  }
  },
  {
   "slug": "nia_human_anatomy",
@@ -284,7 +372,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/nia_human_anatomy/loop.mp4",
   "poster": "assets/work/nia_human_anatomy/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/nia_human_anatomy/full.mp4"
+  }
  },
  {
   "slug": "vulcan_tower_defense",
@@ -309,7 +400,10 @@ window.PROJECTS = [
   ],
   "loop": "assets/work/vulcan_tower_defense/loop.mp4",
   "poster": "assets/work/vulcan_tower_defense/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/vulcan_tower_defense/full.mp4"
+  }
  },
  {
   "slug": "tartarus_vr",
@@ -336,7 +430,10 @@ window.PROJECTS = [
   ],
   "loop": "assets/work/tartarus_vr/loop.mp4",
   "poster": "assets/work/tartarus_vr/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/tartarus_vr/full.mp4"
+  }
  },
  {
   "slug": "sinverse",
@@ -362,7 +459,10 @@ window.PROJECTS = [
   ],
   "loop": "assets/work/sinverse/loop.mp4",
   "poster": "assets/work/sinverse/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/sinverse/full.mp4"
+  }
  },
  {
   "slug": "vulcan_runner",
@@ -389,7 +489,10 @@ window.PROJECTS = [
   ],
   "loop": "assets/work/vulcan_runner/loop.mp4",
   "poster": "assets/work/vulcan_runner/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/vulcan_runner/full.mp4"
+  }
  },
  {
   "slug": "ar_car_controller",
@@ -412,7 +515,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/ar_car_controller/loop.mp4",
   "poster": "assets/work/ar_car_controller/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/ar_car_controller/full.mp4"
+  }
  },
  {
   "slug": "hp_server_vr",
@@ -436,7 +542,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/hp_server_vr/loop.mp4",
   "poster": "assets/work/hp_server_vr/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/hp_server_vr/full.mp4"
+  }
  },
  {
   "slug": "airportverse",
@@ -461,7 +570,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/airportverse/loop.mp4",
   "poster": "assets/work/airportverse/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/airportverse/full.mp4"
+  }
  },
  {
   "slug": "vr_wellbeing",
@@ -487,7 +599,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/vr_wellbeing/loop.mp4",
   "poster": "assets/work/vr_wellbeing/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/vr_wellbeing/full.mp4"
+  }
  },
  {
   "slug": "cc_bio",
@@ -513,7 +628,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/cc_bio/loop.mp4",
   "poster": "assets/work/cc_bio/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/cc_bio/full.mp4"
+  }
  },
  {
   "slug": "celebrity_golf",
@@ -536,7 +654,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/celebrity_golf/loop.mp4",
   "poster": "assets/work/celebrity_golf/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/celebrity_golf/full.mp4"
+  }
  },
  {
   "slug": "chuck_the_sallar",
@@ -560,7 +681,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/chuck_the_sallar/loop.mp4",
   "poster": "assets/work/chuck_the_sallar/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/chuck_the_sallar/full.mp4"
+  }
  },
  {
   "slug": "horror_survivor",
@@ -584,7 +708,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/horror_survivor/loop.mp4",
   "poster": "assets/work/horror_survivor/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/horror_survivor/full.mp4"
+  }
  },
  {
   "slug": "stellar_void",
@@ -607,31 +734,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/stellar_void/loop.mp4",
   "poster": "assets/work/stellar_void/poster.jpg",
-  "full": null
- },
- {
-  "slug": "pixel_game",
-  "title": "Pixel Adventure",
-  "kicker": "Pixel-Art Arcade · Mobile · Unity",
-  "cat": "games",
-  "company": "",
-  "year": "",
-  "summary": "Handheld-style pixel-art arcade game with themed levels: snowboarding, underwater and an ice-cavern yeti finale.",
-  "features": [
-   "Snowboard down snowy slopes",
-   "Swim past jellyfish and narwhals",
-   "Speed boosts and coin trails",
-   "Power-ups in an icy cavern",
-   "Ice yeti finale, level complete",
-   "End-of-run results screen"
-  ],
-  "vertical": true,
-  "big": false,
-  "featured": false,
-  "link": null,
-  "loop": "assets/work/pixel_game/loop.mp4",
-  "poster": "assets/work/pixel_game/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/stellar_void/full.mp4"
+  }
  },
  {
   "slug": "ar_furniture",
@@ -653,7 +759,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/ar_furniture/loop.mp4",
   "poster": "assets/work/ar_furniture/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/ar_furniture/full.mp4"
+  }
  },
  {
   "slug": "poker",
@@ -675,7 +784,10 @@ window.PROJECTS = [
   "link": null,
   "loop": "assets/work/poker/loop.mp4",
   "poster": "assets/work/poker/poster.jpg",
-  "full": null
+  "full": {
+   "type": "file",
+   "src": "assets/work/poker/full.mp4"
+  }
  }
 ];
 window.CATEGORIES = [["all", "All work"], ["xr", "XR & Simulation"], ["multi", "Multiplayer"], ["booth", "Booth & Events"], ["games", "Mobile & PC Games"]];
