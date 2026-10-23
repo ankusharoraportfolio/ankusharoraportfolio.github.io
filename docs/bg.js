@@ -17,7 +17,9 @@
       r: (Math.random() * 1.6 + .6) * dpr, c: COLORS[(Math.random() * COLORS.length) | 0],
     }));
   }
-  addEventListener("resize", resize);
+  let lastW = innerWidth;
+  // Phones fire "resize" when the address bar hides/shows; only rebuild when the width really changes.
+  addEventListener("resize", () => { if (innerWidth !== lastW) { lastW = innerWidth; resize(); } else { h = c.height = innerHeight * dpr; } });
   addEventListener("mousemove", (e) => { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; });
   const LINK = 140;
   function frame() {
