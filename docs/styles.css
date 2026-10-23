@@ -277,3 +277,11 @@ video::-webkit-media-controls-start-playback-button { display: none !important; 
   .genre-title { font-size: 1.45rem; margin-bottom: 18px; }
 }
 .genre-count { margin-left: auto; font: 600 .85rem var(--body); color: var(--muted); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.04); white-space: nowrap; }
+
+/* AI pipeline steps */
+.pipeline ol { list-style: none; margin: 0; padding: 4px; display: grid; gap: 10px; counter-reset: none; }
+.pipeline li { position: relative; display: grid; grid-template-columns: 40px 1fr; grid-template-rows: auto auto; column-gap: 14px; align-items: center; padding: 12px 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid #2c3650; }
+.pipeline li:not(:last-child)::after { content: ""; position: absolute; left: 33px; bottom: -11px; width: 2px; height: 10px; background: linear-gradient(var(--accent), var(--accent-2)); }
+.pipeline li span { grid-row: span 2; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; font: 700 1rem var(--head); color: #031018; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.pipeline li b { font: 600 1rem var(--head); }
+.pipeline li em { font-style: normal; color: var(--muted); font-size: .85rem; }
