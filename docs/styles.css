@@ -296,3 +296,5 @@ video::-webkit-media-controls-start-playback-button { display: none !important; 
 .skill-card.ai { background: linear-gradient(135deg, rgba(0,200,255,.10), rgba(124,92,255,.14)); border-color: #34407a; }
 .lite .skill-card { background: rgba(14,18,28,.92); }
 @media (max-width: 620px) { .skill-grid { grid-template-columns: 1fr; } .skills-top { padding-top: 56px; } }
+/* Phones/touch: no fade-in, content is always fully visible while scrolling */
+.lite .reveal { opacity: 1; transform: none; transition: none; }
