@@ -298,3 +298,10 @@ video::-webkit-media-controls-start-playback-button { display: none !important; 
 @media (max-width: 620px) { .skill-grid { grid-template-columns: 1fr; } .skills-top { padding-top: 56px; } }
 /* Phones/touch: no fade-in, content is always fully visible while scrolling */
 .lite .reveal { opacity: 1; transform: none; transition: none; }
+/* Very small phones (iPhone SE etc.): keep the header on two rows */
+@media (max-width: 380px) {
+  .nav { padding: 10px 12px; }
+  .brand { gap: 8px; }
+  .brand-name { font-size: .95rem; }
+  .btn-nav { padding: 8px 12px; font-size: .85rem; }
+}
