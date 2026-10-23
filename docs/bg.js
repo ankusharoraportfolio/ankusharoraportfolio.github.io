@@ -3,14 +3,14 @@
   const c = document.getElementById("bg");
   const lite = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 760px)").matches;
   if (lite) document.documentElement.classList.add("lite");
-  if (!c || lite || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in")); return; }
+  if (!c || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in")); return; }
   const ctx = c.getContext("2d");
   let w, h, dpr, pts = [], mouse = { x: -1e4, y: -1e4 };
   const COLORS = ["0,200,255", "124,92,255", "0,255,178"];
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     w = c.width = innerWidth * dpr; h = c.height = innerHeight * dpr;
-    const n = Math.round(Math.min(90, (innerWidth * innerHeight) / 16000));
+    const n = Math.round(Math.min(lite ? 36 : 90, (innerWidth * innerHeight) / (lite ? 11000 : 16000)));
     pts = Array.from({ length: n }, () => ({
       x: Math.random() * w, y: Math.random() * h,
       vx: (Math.random() - .5) * .25 * dpr, vy: (Math.random() - .5) * .25 * dpr,

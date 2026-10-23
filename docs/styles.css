@@ -221,7 +221,6 @@ video::-webkit-media-controls-start-playback-button { display: none !important; 
 .hero { min-height: min(92svh, 860px); }
 
 /* Lighter rendering on phones / touch screens: no canvas, no animated blur, no glass blur */
-.lite #bg { display: none; }
 .lite .aurora span { animation: none; filter: none; opacity: 1; }
 .lite .aurora { background: radial-gradient(120% 60% at 0% 0%, rgba(0,200,255,.16), transparent 60%), radial-gradient(120% 60% at 100% 45%, rgba(124,92,255,.14), transparent 60%); }
 .lite .aurora span { display: none; }
