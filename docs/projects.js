@@ -91,7 +91,7 @@ window.PROJECTS = [
   "cat": "xr",
   "company": "Ediiie",
   "year": "2023–24",
-  "summary": "VR maintenance training for an EASA-certified aviation training centre — 150+ mechanical modules such as the jet engine, each with Learn and Practice modes and a proficiency score.",
+  "summary": "VR training simulator for an EASA-certified training centre — part of a programme of 150+ mechanical engineering modules such as the jet engine, each with Learn and Practice modes and a proficiency score.",
   "features": [
    "Task: clean the aircraft windshield, in Learn or Practice mode",
    "A tablet checklist lists every step of the procedure",

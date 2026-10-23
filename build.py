@@ -18,7 +18,7 @@ PREVIEW = "--preview" in sys.argv
 # Curated details per project (spec "name" -> details). Projects not listed here are not published.
 PROJECTS = {
     "Aviation_Maintenance_Sim": dict(cat="xr", company="Ediiie", year="2023–24", featured=1,
-        summary="VR maintenance training for an EASA-certified aviation training centre — 150+ mechanical modules such as the jet engine, each with Learn and Practice modes and a proficiency score."),
+        summary="VR training simulator for an EASA-certified training centre — part of a programme of 150+ mechanical engineering modules such as the jet engine, each with Learn and Practice modes and a proficiency score."),
     "Jet_Engine_VR": dict(cat="xr", company="Ediiie", year="2023–24",
         summary="VR jet-engine training with a virtual instructor and an AI tutor that answers trainees' questions in text and voice."),
     "HP_Server_VR": dict(cat="xr", company="Ediiie", year="2023–24",
