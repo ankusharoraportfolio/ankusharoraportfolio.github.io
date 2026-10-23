@@ -24,11 +24,12 @@
       media.appendChild(bd);
     }
     media.appendChild(el("img", { src: p.poster, alt: p.title, loading: "lazy" }));
-    const vid = el("video", { muted: "", loop: "", playsinline: "", preload: "none" });
+    const vid = el("video", { muted: "", loop: "", playsinline: "", preload: "none", disablepictureinpicture: "" });
     vid.muted = true;
     vid.dataset.src = p.loop;
     media.appendChild(vid);
     media.appendChild(el("span", { class: "badge", text: label(p.cat) }));
+    media.appendChild(el("span", { class: "play", "aria-hidden": "true", text: "▶" }));
 
     const meta = [p.company, p.year].filter(Boolean).join(" · ");
     const body = el("div", { class: "card-body" },
@@ -72,13 +73,10 @@
     filters.appendChild(b);
   });
 
-  // Touch devices: play loops when cards scroll into view
-  const io = !canHover && "IntersectionObserver" in window ? new IntersectionObserver((entries) => entries.forEach((e) => {
-    const v = e.target.querySelector("video");
-    if (e.isIntersecting && e.intersectionRatio > 0.6) { if (!v.src) v.src = v.dataset.src; v.play().then(() => e.target.classList.add("playing")).catch(() => {}); }
-    else { v.pause(); e.target.classList.remove("playing"); }
-  }), { threshold: [0, 0.6] }) : null;
-  function observeCards() { if (io) grid.querySelectorAll(".card").forEach((c) => io.observe(c)); }
+  // Touch devices: no autoplaying previews (smooth scrolling, saves mobile data). Tap a card to watch.
+  function observeCards() {}
+  const hint = document.getElementById("work-hint");
+  if (hint && !canHover) hint.textContent = "Tap any project to watch the full video with sound.";
   render("all");
 
   // Case-study videos play when visible

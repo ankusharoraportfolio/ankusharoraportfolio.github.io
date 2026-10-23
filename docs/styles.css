@@ -213,3 +213,58 @@ section, .footer, main { position: relative; z-index: 1; }
 .to-top.show { opacity: 1; transform: none; pointer-events: auto; }
 .tz { margin-top: 18px; font-size: .95rem; }
 .stats dt { font-variant-numeric: tabular-nums; }
+
+/* ---------- Mobile & touch ---------- */
+.play { position: absolute; z-index: 2; right: 12px; bottom: 12px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-size: 15px; padding-left: 3px; color: #031018; background: var(--accent); box-shadow: 0 6px 20px rgba(0,0,0,.45); }
+.card.playing .play { opacity: 0; transition: opacity .2s; }
+video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+.hero { min-height: min(92svh, 860px); }
+
+/* Lighter rendering on phones / touch screens: no canvas, no animated blur, no glass blur */
+.lite #bg { display: none; }
+.lite .aurora span { animation: none; filter: none; opacity: 1; }
+.lite .aurora { background: radial-gradient(120% 60% at 0% 0%, rgba(0,200,255,.16), transparent 60%), radial-gradient(120% 60% at 100% 45%, rgba(124,92,255,.14), transparent 60%); }
+.lite .aurora span { display: none; }
+.lite .card, .lite .btn-ghost, .lite .nav, .lite .modal::backdrop { backdrop-filter: none; -webkit-backdrop-filter: none; }
+.lite .nav { background: rgba(7,9,15,.96); }
+.lite .name span { animation: none; }
+
+@media (max-width: 960px) {
+  .nav { flex-wrap: wrap; row-gap: 8px; }
+  .nav nav { display: flex; order: 3; width: 100%; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+  .nav nav::-webkit-scrollbar { display: none; }
+  .nav nav a { flex: none; font-size: .92rem; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid var(--line); }
+  .nav nav a::after { display: none; }
+  html { scroll-padding-top: 120px; }
+}
+@media (max-width: 620px) {
+  .brand-name { display: inline; font-size: 1.05rem; }
+  .mono { width: 34px; height: 34px; font-size: .85rem; border-radius: 9px; }
+  .hero { min-height: auto; }
+  .hero-inner { padding-top: 56px; padding-bottom: 48px; }
+  .name { font-size: clamp(2.7rem, 13vw, 3.6rem); }
+  .tagline { font-size: 1.15rem; }
+  .cta .btn { flex: 1 1 auto; justify-content: center; }
+  .card.tall .media { aspect-ratio: 9 / 13; }
+  .genre-title { font-size: 1rem; }
+  .case { padding: 28px 0; gap: 22px; }
+  .diagram { padding: 10px; }
+  .to-top { right: 14px; bottom: 14px; width: 44px; height: 44px; }
+  /* Full-screen project viewer on phones */
+  .modal { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; border: 0; }
+  .m-media video, .m-media iframe { max-height: 56dvh; }
+  .m-media.vertical video { height: 62dvh; }
+  .close { top: max(10px, env(safe-area-inset-top)); right: 10px; width: 44px; height: 44px; font-size: 1.6rem; }
+  .m-nav { top: auto; bottom: calc(14px + env(safe-area-inset-bottom)); position: fixed; width: 50px; height: 50px; }
+  .m-nav.prev { left: 14px; } .m-nav.next { right: 14px; }
+  .m-body { padding: 18px 18px 90px; }
+}
+
+/* Grid columns per screen size (same specificity as the genre grids, so these win) */
+@media (max-width: 960px) { .genre .grid, .grid.featured { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) {
+  .genre .grid, .grid.featured { grid-template-columns: 1fr; gap: 18px; }
+  .genre .card.big, .genre .card.tall { grid-column: auto; grid-row: auto; }
+  .genre .card.big .media { aspect-ratio: 16 / 10; flex: none; min-height: 0; }
+  .genre .card.tall .media { aspect-ratio: 9 / 13; flex: none; min-height: 0; }
+}

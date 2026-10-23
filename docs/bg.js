@@ -1,7 +1,9 @@
 // Animated constellation background: drifting nodes linked by faint lines, reacting softly to the mouse.
 (function () {
   const c = document.getElementById("bg");
-  if (!c || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in")); return; }
+  const lite = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 760px)").matches;
+  if (lite) document.documentElement.classList.add("lite");
+  if (!c || lite || window.matchMedia("(prefers-reduced-motion: reduce)").matches) { document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in")); return; }
   const ctx = c.getContext("2d");
   let w, h, dpr, pts = [], mouse = { x: -1e4, y: -1e4 };
   const COLORS = ["0,200,255", "124,92,255", "0,255,178"];
