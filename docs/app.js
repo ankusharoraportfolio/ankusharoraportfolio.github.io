@@ -52,7 +52,7 @@
   function section(title, list, featured) {
     const g = el("div", { class: "grid" + (featured ? " featured" : "") });
     list.forEach((p) => g.appendChild(card(p, featured)));
-    return el("div", { class: "genre" }, title ? el("h3", { class: "genre-title", text: `${title} · ${list.length}` }) : null, g);
+    return el("div", { class: "genre" }, title ? el("h3", { class: "genre-title" }, document.createTextNode(title), el("span", { class: "genre-count", text: `${list.length} projects` })) : null, g);
   }
   function render(key) {
     grid.innerHTML = "";

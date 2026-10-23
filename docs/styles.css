@@ -267,3 +267,13 @@ video::-webkit-media-controls-start-playback-button { display: none !important; 
   .genre .card.big .media { aspect-ratio: 16 / 10; flex: none; min-height: 0; }
   .genre .card.tall .media { aspect-ratio: 9 / 13; flex: none; min-height: 0; }
 }
+
+/* Genre section headings: larger, with an accent bar, and clear space between genres */
+.genre + .genre { margin-top: 88px; }
+.genre-title { display: flex; align-items: center; gap: 14px; font: 700 clamp(1.5rem, 2.6vw, 2rem)/1.2 var(--head); color: var(--text); margin: 0 0 24px; padding: 0 0 14px; border-bottom: 1px solid var(--line); }
+.genre-title::before { content: ""; width: 6px; height: 1.1em; border-radius: 3px; background: linear-gradient(180deg, var(--accent), var(--accent-2)); flex: none; }
+@media (max-width: 620px) {
+  .genre + .genre { margin-top: 64px; }
+  .genre-title { font-size: 1.45rem; margin-bottom: 18px; }
+}
+.genre-count { margin-left: auto; font: 600 .85rem var(--body); color: var(--muted); padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.04); white-space: nowrap; }
