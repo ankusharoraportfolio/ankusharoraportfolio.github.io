@@ -139,3 +139,22 @@
   const top = document.querySelector(".to-top");
   addEventListener("scroll", () => top && top.classList.toggle("show", scrollY > 900), { passive: true });
 })();
+
+// If the browser blocks autoplay (e.g. iPhone Low Power Mode), swap decorative videos for their still poster image.
+(function () {
+  document.querySelectorAll(".hero-video, .case-media video").forEach((v) => {
+    const fallback = () => {
+      const img = document.createElement("img");
+      img.src = v.getAttribute("poster"); img.alt = ""; img.className = v.className; img.setAttribute("aria-hidden", "true");
+      if (v.classList.contains("hero-video")) Object.assign(img.style, { position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover", opacity: ".42" });
+      else Object.assign(img.style, { width: "100%", borderRadius: "16px", border: "1px solid var(--line)" });
+      v.replaceWith(img);
+    };
+    if (v.classList.contains("hero-video")) {
+      const p = v.play();
+      if (p && p.catch) p.catch(fallback);
+    } else {
+      v.addEventListener("error", fallback);
+    }
+  });
+})();
